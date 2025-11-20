@@ -124,7 +124,7 @@
               {{ formatDate(userStore.loginUser?.createTime) }}
             </a-descriptions-item>
             <a-descriptions-item label="API地址">
-              http://localhost:8866/api
+              {{ URLS.API_BASE_URL }}
             </a-descriptions-item>
             <a-descriptions-item label="系统状态">
               <a-badge status="processing" text="运行中" />
@@ -139,6 +139,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue'
 import { useUserStore } from '@/stores/user'
+import { URLS } from '@/config'
 import {
   WechatOutlined,
   MenuOutlined,

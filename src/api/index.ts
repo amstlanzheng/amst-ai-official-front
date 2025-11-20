@@ -1,6 +1,8 @@
+import { URLS } from '@/config'
+
 // 健康检查
 export const healthCheck = () => {
-  return fetch('http://localhost:8866/api/health')
+  return fetch(URLS.HEALTH_CHECK)
     .then(res => res.json())
     .then(data => data)
 }

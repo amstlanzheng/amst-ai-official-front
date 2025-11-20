@@ -1,5 +1,6 @@
 import request from '@/utils/request'
 import axios from 'axios'
+import { URLS } from '@/config'
 import type {
   BaseResponse,
   WxMaterialQueryRequest,
@@ -36,7 +37,7 @@ export const deleteMaterial = (appId: string, materialId: string) => {
 export const downloadMaterial = (appId: string, materialId: string, fileName: string) => {
   // 创建新的axios实例用于下载，避免响应拦截器干扰
   const downloadInstance = axios.create({
-    baseURL: 'http://localhost:8866/api',
+    baseURL: URLS.API_BASE_URL,
     timeout: 30000,
     withCredentials: true,
     responseType: 'blob'

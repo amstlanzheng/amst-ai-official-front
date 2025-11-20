@@ -331,6 +331,7 @@ import { ref, reactive, onMounted } from 'vue'
 import { message } from 'ant-design-vue'
 import { PlusOutlined, SearchOutlined, DeleteOutlined, FileSearchOutlined } from '@ant-design/icons-vue'
 import type { WxAccountVO } from '@/types'
+import { URLS } from '@/config'
 import { listWxAccountByPage } from '@/api/wxAccount'
 import { 
   addReplyRule, 
@@ -725,7 +726,7 @@ const getMaterialImageUrl = (material: WxMaterialFileBatchGetNewsItem) => {
     return material.url
   }
   
-  const baseUrl = 'http://localhost:8866'
+  const baseUrl = URLS.BASE_URL
   return `${baseUrl}${material.url.startsWith('/') ? '' : '/'}${material.url}`
 }
 

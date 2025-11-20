@@ -5,7 +5,8 @@ import type { BaseResponse } from '@/types'
 
 // 创建axios实例
 const service: AxiosInstance = axios.create({
-  baseURL: 'https://officail.lanslot.xyz/api',
+  // baseURL: 'https://officail.lanslot.xyz/api',
+  baseURL: 'https://officail.amstlan.com/api',
   timeout: 10000,
   withCredentials: true, // 支持跨域cookie
   headers: {

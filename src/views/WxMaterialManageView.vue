@@ -235,6 +235,7 @@ import type {
   WxMpMaterialVideoInfoResult,
   WxMaterialQueryRequest
 } from '@/types'
+import { URLS } from '@/config'
 import { listWxAccountByPage } from '@/api/wxAccount'
 import {
   listMaterial,
@@ -617,7 +618,7 @@ const getImageUrl = (material: WxMaterialFileBatchGetNewsItem) => {
   
   // 对于图片显示，我们可能需要使用API来获取图片数据
   // 这里先尝试直接URL，如果不行再考虑其他方案
-  const baseUrl = 'http://localhost:8866'
+  const baseUrl = URLS.BASE_URL
   return `${baseUrl}${material.url.startsWith('/') ? '' : '/'}${material.url}`
 }
 
